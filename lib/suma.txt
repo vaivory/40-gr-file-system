@@ -1,0 +1,12 @@
+/**
+ * Kam skirta f-ja: dvieju skaiciu sumavimui,
+ * @param {number} a Pirmasis skaicius
+ * @param {numder} b Antrasis skaicius
+ * @returns {string} Skaiciu suma
+ */
+
+function sum(a,b) {
+    return a+b;
+}
+
+const x=sum(7,5);  //x-bus stringas nes mes patys nurodem kad mum grazint ustringa
