@@ -1,10 +1,10 @@
 import { file } from './lib/file.js'
 //console.log(file);
 
-import { skaitomKarves} from './lib/karviuTurgus.js';
+import { skaitomKarves } from './lib/karviuTurgus.js';
 
- const karves = await skaitomKarves();
- //console.log(karves);
+const karves = await skaitomKarves();
+//console.log(karves);
 
 //kaip reiketu nurodyti kelia kur pakursim faila?
 //file.create('data/users', 'petras.json', {name: 'Petras', age: 99});
@@ -29,7 +29,7 @@ import { skaitomKarves} from './lib/karviuTurgus.js';
 //*******************************************
 //  const readStatus=await file.read('users', 'petras.json');
 // console.log('readstatus',readStatus);
- 
+
 // const readStatus2=await file.read('users', 'maryte.json');  //jei failo nera tai gaunam kritine klaida ir musu programa issijunge
 // //if (readStatus2) {
 // //    console.log('OK');
@@ -53,26 +53,29 @@ import { skaitomKarves} from './lib/karviuTurgus.js';
 // const readStatus4=await file.read('/users/', 'petras.json');
 // console.log('readstatus',readStatus4);
 
-const userMaryte={
+const userMaryte = {
     name: 'Maryte',
     age: 87,
     isMaried: false,
 }
 
-const createStatus=await file.create('users','maryte.json', userMaryte);
+const createStatus = await file.create('users', 'maryte.json', userMaryte);
 
 console.log('File status', createStatus);
 
-const naujasFailas={
+const naujasFailas = {
     name: 'vartotojas',
     year: 232,
     citi: 'Vilnius',
 }
 
-const createStatus2= await file.create('','vartotojas.json', naujasFailas);
+// const createStatus2= await file.create('','vartotojas.json', naujasFailas);
 
-const batas={
-    color: 'red',
-    size: 38,
-}
-const createStatus3= await file.create('shoes','batai.json', batas); //kolkas reikia paciam sukurti folderi, galvosim kaip automatizuoti
+// const batas={
+//     color: 'red',
+//     size: 38,
+// }
+//const createStatus3= await file.create('shoes','batai.json', batas); //kolkas reikia paciam sukurti folderi, galvosim kaip automatizuoti
+
+const createStatus4 = await file.create('users', 'betkas.json', userMaryte);
+console.log(createStatus4);
